@@ -205,29 +205,33 @@ Animations
   SECTION PUR FEATURES
   -----------------------*/
 
-  .ourfeatures{
+  .ourfeatures,.ourproducts{
       padding: var(--padding-box);
-      background: var(--color-yellow);
       text-align: center;
      
   }
-  .ourfeatures__subtitle{
+  .ourfeatures{
+ 
+    background: var(--color-yellow);
+   
+}
+  .ourfeatures__subtitle,.ourproducts__subtitle{
     font-weight:lighter ;
     text-transform: uppercase;
     font-size: 1.2em;
 
 }
-  .ourfeatures__title{
+  .ourfeatures__title,.ourproducts__title{
     font-weight: 700;
     font-size: 3em;
     font-family: var(--title);
     margin-bottom: 2em;
   }
-  .ourfeature__container{
+  .ourfeature__container,.ourproducts__container{
       
       display: grid;
       grid-auto-flow: columns;
-      grid-template-columns: repeat(auto-fill,min-max(15em,20em));
+      grid-template-columns: repeat(auto-fill,minmax(15em,20em));
       gap: 4em;
       align-items: center;
       justify-content: center;
@@ -311,3 +315,46 @@ Animations
       
     }
   }
+/*----------------------------
+
+  ourproducts
+
+  ----------------------------*/
+  .ourproducts{
+ 
+    background:white;
+   
+}
+
+.product{
+  overflow: hidden;
+  border-radius: 10px;
+  background:white;
+  box-shadow: 0px 0px 9px -1px rgba(117,117,117,0.55);
+
+}
+
+.product img{
+  width: 100%;
+}
+.texts-prices{
+  display: flex;
+  background:white;
+  padding: 2em;
+  justify-content: space-between;
+}
+.product-texts{
+  text-align: left;
+  
+}
+
+.product-texts p{
+  text-transform: uppercase;
+  margin-bottom: .5em;
+}
+
+.product-price{
+  text-align: right;
+  font-size: 2em;
+  font-weight: bold;
+}
