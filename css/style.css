@@ -227,7 +227,7 @@ Animations
     font-family: var(--title);
     margin-bottom: 2em;
   }
-  .ourfeature__container{
+  .ourfeature__container,.ourproducts__container{
       
       display: grid;
       grid-auto-flow: columns;
