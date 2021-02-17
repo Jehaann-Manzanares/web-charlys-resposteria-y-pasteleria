@@ -205,7 +205,7 @@ Animations
   SECTION PUR FEATURES
   -----------------------*/
 
-  .ourfeatures,.ourproducts{
+  .ourfeatures,.ourproducts,.ourprocess{
       padding: var(--padding-box);
       text-align: center;
      
@@ -215,19 +215,19 @@ Animations
     background: var(--color-yellow);
    
 }
-  .ourfeatures__subtitle,.ourproducts__subtitle{
+  .ourfeatures__subtitle,.ourproducts__subtitle,.ourprocess__subtitle{
     font-weight:lighter ;
     text-transform: uppercase;
     font-size: 1.2em;
 
 }
-  .ourfeatures__title,.ourproducts__title{
+  .ourfeatures__title,.ourproducts__title, .ourprocess__title{
     font-weight: 700;
     font-size: 3em;
     font-family: var(--title);
     margin-bottom: 2em;
   }
-  .ourfeature__container,.ourproducts__container{
+  .ourfeature__container,.ourproducts__container, .ourprocess__container{
       
       display: grid;
       grid-auto-flow: columns;
@@ -236,7 +236,7 @@ Animations
       align-items: center;
       justify-content: center;
   }
-  .ourfeature{
+  .ourfeature,.ourproces{
     background-color: white;
     color: var(--color-light-black);
     padding: 1.5em;
@@ -245,12 +245,12 @@ Animations
     overflow: hidden;
     transition:.5s ease all;
   }
-  .ourfeature:hover{
+  .ourfeature:hover,.ourproces:hover{
       transform: scale(1.1);
       
   }
 
-  .ourfeature figure{
+  .ourfeature figure, .ourproces figure{
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -337,14 +337,14 @@ Animations
   border-radius: 10px;
   background:white;
   box-shadow: 0px 0px 9px -1px rgba(117,117,117,0.55);
-  margin-right: 4em;
+  
   margin-bottom: 2em;
   min-width: 17em ;
   max-width: 20em;
 }
 
 .product:first-child{
-  margin-left: 4em;
+  margin-left: 8em;
 }
 
 .product img{
@@ -370,4 +370,38 @@ Animations
   text-align: right;
   font-size: 2em;
   font-weight: bold;
+}
+
+/*-----------------------------
+our process
+-----------------------------*/
+.ourprocess{
+background: rgba(31, 223, 235, .5);
+}
+.ourprocess__container{
+  grid-template-columns: repeat(auto-fill,minmax(5em,20em));
+  gap: 0;
+}
+
+.ourproces{
+  
+  border-radius: 0;
+  
+}
+
+.ourproces:first-child{
+  border-radius: 10px 0 0 10px;
+}
+
+.ourproces:last-child{
+  border-radius: 0 10px 10px 0;
+}
+.ourproces figure{
+ 
+  margin-bottom: 7em;
+}
+.ourproces h3{
+  font-size: 2em;
+  margin-top: .5em;
+  margin-bottom: .5em;
 }
