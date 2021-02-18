@@ -9,14 +9,16 @@
     font-size: 16px;
     --title:'Poppins', sans-serif;
     --paragraph:'Poppins', sans-serif;
-    
+    scroll-behavior: smooth;
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    outline: none;
+    text-decoration: none;
+    list-style: none;
 }
 body{
     font-family: var(--paragraph);
@@ -126,13 +128,24 @@ main .image-main img {
 }
 
 main h1 {
-    
+    position: relative;
+    float: left;
     font-weight: bold;
     font-size: 4.5em;
     margin-bottom: .5em;
     color:var(--color-pink);
     text-align: left;
     
+}
+
+main h1 span{
+  position:absolute;
+  right: 0;
+  width:0;
+  animation: escribir 5s steps(20) infinite alternate;
+  background: white;
+  border-left: 1px solid #000;
+   
 }
 
 main p {
@@ -221,7 +234,7 @@ Animations
     font-size: 1.2em;
 
 }
-  .ourfeatures__title,.ourproducts__title, .ourprocess__title{
+  .ourfeatures__title,.ourproducts__title, .ourprocess__title,.contact_title{
     font-weight: 700;
     font-size: 3em;
     font-family: var(--title);
@@ -310,10 +323,7 @@ Animations
       width: 100%;
       
     }
-    main .image-main img{
-      
-      
-    }
+    
   }
 /*----------------------------
 
@@ -404,4 +414,83 @@ background: rgba(31, 223, 235, .5);
   font-size: 2em;
   margin-top: .5em;
   margin-bottom: .5em;
+}
+
+#QFSagfu-1613592799970 {
+    display: none;
+}
+.contactus__container{
+  padding: var(--padding-box);
+  display: grid;
+  grid-auto-flow: columns;
+  grid-template-columns: repeat(auto-fill, minmax(15em,35em));  
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.contactus__container figure img{
+ width: 100%;
+}
+.texts-direction,.texts-phone{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+  
+}
+
+.texts-direction:hover .icon.location,.texts-phone:hover .icon.mobile {
+  animation: 1s pulso infinite
+}
+
+.texts-phone a{
+  color:var(--color-black);
+  
+}
+.icon{
+  width:50px;
+  height: 70px;
+  margin-right: 1em;
+}
+
+footer{
+  padding: var(--padding-box);
+  background: var(--color-pink);
+}
+.footer_container{
+  display: grid;
+  grid-auto-flow: columns;
+  grid-template-columns: repeat(3,1fr);  
+  text-align: center;
+  color: white;
+  
+}
+
+.footer_container h4{
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
+
+}
+.footer_container p{
+  
+  margin-bottom: .5em;
+
+}
+footer .logo{
+  width: 10em;
+}
+
+.socialicon img{
+width: 60px;
+height: 60px;
+}
+
+.line{
+  width: 100%;
+  border-bottom: 1px solid white ;
+}
+
+@keyframes escribir {
+  from { width: 100% }
+  to { width:0 }
 }
