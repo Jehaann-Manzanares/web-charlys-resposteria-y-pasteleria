@@ -49,8 +49,29 @@ nav img {
     color:var(--color-pink);
     font-size: 1em;
     font-weight: bold;
-    width: 3em;
+    width: 8em;
     height: auto;
+    
+}
+
+nav ul{
+  display:flex;
+}
+
+nav ul li{
+  color:white;
+  margin-right:2em;
+  padding: .5em;
+}
+
+nav ul li:last-child{
+  border: 1px solid white;
+  border-radius: 5px;
+  
+}
+nav ul li a{
+  color:white;
+  
 }
 
 h1{
@@ -65,6 +86,8 @@ h1{
     position: relative;
     width: 50px;
     height: 25px;
+    display: none;
+    visibility: hidden;
     
     
 }
@@ -76,6 +99,7 @@ h1{
   background-color: #fff;
   border-radius: 5px;
   transition: 0.2s ease-in;
+  animation: 1s ;
   
 }
 .McButton b:nth-child(1) {
@@ -128,10 +152,8 @@ main .image-main img {
 }
 
 main h1 {
-    position: relative;
-    float: left;
     font-weight: bold;
-    font-size: 4.5em;
+    font-size: 4em;
     margin-bottom: .5em;
     color:var(--color-pink);
     text-align: left;
@@ -139,12 +161,9 @@ main h1 {
 }
 
 main h1 span{
-  position:absolute;
-  right: 0;
-  width:0;
-  animation: escribir 5s steps(20) infinite alternate;
+  
   background: white;
-  border-left: 1px solid #000;
+ 
    
 }
 
@@ -317,13 +336,50 @@ Animations
       
     }
     main h1{
-      font-size: 3em;
+      font-size: 2.3em;
     }
     main .image-main{
       width: 100%;
       
     }
+
+    .ourproducts__container .product:first-child{
+      margin-left: 2em;
+    }
+
+    .McButton{
+
+      
+      display: block;
+      visibility: visible;
+    }
+
+    .menu{
+      display: block;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 63px;
+      background:var(--color-pink);
+      border-radius: 5px;
+      padding: 1em;
+      margin-right: 1.2em;
+      animation: 1s ease-in-out all
+    }
+    .menu li a{
+      
+      color:white;
+    }
+
+    .menu li:last-child{
+      
+      border-color:white;
+    }
     
+  }
+
+  .menu.inactive{
+    display: none;
   }
 /*----------------------------
 
@@ -460,9 +516,11 @@ footer{
 .footer_container{
   display: grid;
   grid-auto-flow: columns;
-  grid-template-columns: repeat(3,1fr);  
+  grid-template-columns: repeat(auto-fill,minmax(15em,23em)); 
   text-align: center;
   color: white;
+  justify-content: center;
+  margin-bottom: 2em;
   
 }
 
@@ -477,20 +535,41 @@ footer{
 
 }
 footer .logo{
-  width: 10em;
+  width: 18em;
+  margin: 0 auto;
 }
 
 .socialicon img{
-width: 60px;
-height: 60px;
+width: 40px;
+height: 40px;
 }
+.socialicon img:first-child{
+  margin-right: .5em;
+}
+.socialicon img:hover{
+  animation: 1s pulso infinite
+}
+
+
 
 .line{
-  width: 100%;
-  border-bottom: 1px solid white ;
+  width: 5%;
+  border-bottom: 3px solid white ;
+  display: flex;
+  margin: 0 auto;
+
 }
 
-@keyframes escribir {
-  from { width: 100% }
-  to { width:0 }
+.developed{
+ display: flex;
+ justify-content: center;
+ color: hsl(0, 0%, 70%);
+ margin-top: 1em;
+ transition: 1s all
 }
+
+.developed:hover{
+
+  color: white;
+ 
+ }
