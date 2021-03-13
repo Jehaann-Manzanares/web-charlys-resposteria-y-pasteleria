@@ -24,6 +24,28 @@ body{
     font-family: var(--paragraph);
 }
 
+::-webkit-scrollbar{
+  
+  width: 20px;
+  height:  5px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--color-yellow);
+  border-radius: 10px;
+  transition: background ease-in-out .5s;
+  
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: var(--color-pink)
+
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1); 
+  border-radius: 5px;
+}
 
 .center{
     display: flex;
@@ -344,18 +366,15 @@ Animations
     }
 
     .ourproducts__container .product:first-child{
-      margin-left: 2em;
+      margin-left: 0;
     }
 
     .McButton{
-
-      
       display: block;
       visibility: visible;
     }
 
     .menu{
-      display: block;
       display: block;
       position: absolute;
       right: 0;
@@ -375,12 +394,18 @@ Animations
       
       border-color:white;
     }
-    
+
+    .menu.inactive{
+      display: none;
+  
+    }
+
+    .ourfeatures__title,.ourproducts__title, .ourprocess__title,.contact_title{
+      font-size: 2.3em;
+    }
   }
 
-  .menu.inactive{
-    display: none;
-  }
+  
 /*----------------------------
 
   ourproducts
@@ -410,7 +435,7 @@ Animations
 }
 
 .product:first-child{
-  margin-left: 8em;
+  margin-left: 4em;
 }
 
 .product img{
@@ -563,7 +588,7 @@ height: 40px;
 .developed{
  display: flex;
  justify-content: center;
- color: hsl(0, 0%, 70%);
+ color: rgba(244, 139, 172,1);
  margin-top: 1em;
  transition: 1s all
 }

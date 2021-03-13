@@ -2,7 +2,12 @@ const typed = new Typed('.typed' , {
     strings: [
         'Reposterías',
         'Cosadehorno',
-        'Bocadillos'
+        'Empanadas',
+		'Hojaldres',
+        'Trenzas',
+        'Croassans',
+		'Trenzas',
+
     ],
     //stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.
 	typeSpeed: 75, // Velocidad en mlisegundos para poner una letra,
