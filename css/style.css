@@ -436,6 +436,9 @@ Animations
 
 .product img{
   width: 100%;
+  min-height: 13em;
+  max-height: 13em;
+  
 }
 .texts-prices{
   display: flex;
